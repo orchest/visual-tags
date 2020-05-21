@@ -1,6 +1,5 @@
 # visual-tags
 
-![Github Actions Status](http://github.com/orchest/visual-tags/workflows/Build/badge.svg)
 
 A small JupyterLab extension that allows you to more easily choose which cells get executed.
 
