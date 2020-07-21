@@ -11,7 +11,7 @@
   "bugs": {
     "url": "http://github.com/orchest/visual-tags/issues"
   },
-  "license": "Apache 2.0",
+  "license": "Apache-2.0",
   "author": "R. Lamers",
   "files": [
     "lib/**/*.{d.ts,eot,gif,html,jpg,js,js.map,json,png,svg,woff2,ttf}",
