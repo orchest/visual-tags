@@ -71,7 +71,7 @@ export
 
   _setChangeListener() {
 
-    if (!this.tracker.currentWidget.isRevealed) {
+    if (this.tracker.currentWidget && !this.tracker.currentWidget.isRevealed) {
       this.tracker.currentWidget.revealed.then(() => {
         this._iterateCells(this.tracker.currentWidget);
       });
