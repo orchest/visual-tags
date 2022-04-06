@@ -7,7 +7,7 @@ A small JupyterLab extension that allows you to more easily choose which cells g
 
 ## Requirements
 
-* JupyterLab >= 2.0
+* JupyterLab >= 3.0
 
 ## Install
 
