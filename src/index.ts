@@ -99,7 +99,7 @@ export
         cellTagRoot = null;
       }
     }
-    else if (cellTagRoot === null) {
+    if (cellTagRoot === null) {
       let jpInputAreaEditor = node.querySelector(".jp-InputArea-editor");
 
       if (jpInputAreaEditor !== null) {
