@@ -92,13 +92,18 @@ export
 
   _updateCellTagDom(node: HTMLElement, tags: Array<string>, cellIndex: Number) {
     let cellTagRoot = node.querySelector(".visual-cell-tags");
+    let shouldRenderTags = tags.length > 0;
 
-    if (tags.length === 0) {
-      if (cellTagRoot !== null) {
+    // If no defined tags,remove cellTagRoot.
+    if (!shouldRenderTags && cellTagRoot !== null) {
         cellTagRoot.remove();
         cellTagRoot = null;
-      }
     }
+
+    // Since there are no tags, exit.
+    if(!shouldRenderTags) return;
+
+    // Instantiate cellTagRoot if it doesn't exist yet.
     if (cellTagRoot === null) {
       let jpInputAreaEditor = node.querySelector(".jp-InputArea-editor");
 
@@ -116,11 +121,14 @@ export
         jpInputAreaEditor.prepend(cellTagRoot);
 
       } else {
+        // Unable to find jpInputAreaEditor to prepend cellTagRoot, exit.
         console.warn("Class .jp-InputArea-editor not found. Probably because Jupyter has changed their internal classnames/HTML structure.")
+        return;
       }
 
     }
 
+    // cellTagRoot should already exist and start to render tags.
     if (cellTagRoot !== null) {
       let tagsToAdd = tags.slice();
       let tagEls = cellTagRoot.querySelectorAll(".cell-tag");
