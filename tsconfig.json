@@ -6,7 +6,11 @@
     "esModuleInterop": true,
     "incremental": true,
     "jsx": "react",
-    "lib": [ "ESNext.AsyncIterable" ],
+    "lib": [
+       "ESNext.AsyncIterable",
+       "ES5",
+       "ES6",
+      ],
     "module": "esnext",
     "moduleResolution": "node",
     "noEmitOnError": true,
